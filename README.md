@@ -32,5 +32,3 @@
     $db = new PDO($dsn, DB_USER, DB_PASSWORD);
 ?> // Ej nödvändigt att avslut "ren" php med ?>
 ````
-### ToDo
-    
