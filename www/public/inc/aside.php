@@ -1,5 +1,5 @@
 <?php
-error_reporting(E_ALL ^ E_NOTICE);  // Tar bort error meddelanden
+error_reporting(E_ALL ^ E_NOTICE);  // Tar bort error meddelanden att det är två sessions igång samtidgt då det är en session i index.php och en i aside.php
 // Starta sessionen
 session_start();
 

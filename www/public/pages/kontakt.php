@@ -33,11 +33,6 @@
         </main>    <?php
         }else{
     ?>
-    <form method="post">
-       Username: <input type="text" name="username" size="20" />
-       Password: <input type="password" name="password" size="20" />
-       <input type="submit" value="Submit" name="login"/>
-    </form>
 	
     <?php } ?>
 </body>
