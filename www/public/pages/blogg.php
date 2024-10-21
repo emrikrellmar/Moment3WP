@@ -18,7 +18,7 @@
     ?>    
         <main>
             <article>
-                <h1>Senaste inlägg: "Min första vecka som webbutvecklare"</h1>
+                <h1>Senaste inlägg: "Min första vecka som webbutvecklare"</h>
                 <p>Att starta min resa som webbutvecklare har varit både spännande och utmanande. Efter flera månader av studier har jag äntligen börjat mitt första jobb inom branschen, och jag vill dela med mig av mina intryck och vad jag har lärt mig hittills.</p>
 
                 <h3>Första dagen – nervös men nyfiken</h3>
