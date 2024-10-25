@@ -1,10 +1,22 @@
 <?php
 session_start();
+
+// Inloggning som "admin"
 if (isset($_POST['password'])) {
     if ($_POST['password'] == '12345' && $_POST['username'] == 'admin') {
         $_SESSION['inLoggad'] = true;
+        session_regenerate_id();
     }
 }
+
+// Inloggning som "emrik"
+if (isset($_POST['password'])) {
+    if ($_POST['password'] == '54321' && $_POST['username'] == 'emrik') {
+        $_SESSION['inLoggad'] = true;
+        session_regenerate_id();
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="sv">
@@ -27,10 +39,10 @@ if (isset($_POST['password'])) {
     ?>
 
         <h1>Logga in</h1>
-        <form method="post">
-            Username: <input type="text" name="username" size="20" />
-            Password: <input type="password" name="password" size="20" />
-            <input type="submit" value="Submit" name="login" />
+        <form id=loggout method="post">
+            Användarnamn: <input type="text" name="username" size="20" />
+            Lösenord: <input type="password" name="password" size="20" />
+            <input type="submit" value="Logga in" name="login" />
         </form>
 
     <?php } ?>

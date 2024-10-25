@@ -17,7 +17,7 @@
 				<?php include("inc/meny.php"); ?>
 			</nav>
 			<aside>
-				<?php include("inc/aside.php"); ?>
+				<?php include("inc/login.php"); ?>
 			</aside>
 		</section>
 
