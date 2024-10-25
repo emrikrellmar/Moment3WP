@@ -13,6 +13,14 @@ Inloggningssystemet är huvuddelen av projektet och den består av:
 
 1. **Inloggningsformulär**: 
    - Användaren möts av ett enkelt formulär där de kan fylla i sitt användarnamn och lösenord.
+
+   - Man kan därefter logga in med två olika användare
+  
+   emrik:
+   - **Användarnamn**: `emrik`
+   - **Lösenord**: `54321`
+
+   Admin:
    - **Användarnamn**: `admin`
    - **Lösenord**: `12345`
 
@@ -28,5 +36,8 @@ Inloggningssystemet är huvuddelen av projektet och den består av:
 - `pages/bilder.php`: Visar ett bildgalleri för inloggade användare.
 - `pages/kontakt.php`: Innehåller ett kontaktformulär för inloggade användare att skicka meddelanden.
   
-- `inc/header.php`, `inc/footer.php`: Återanvändbara sidhuvuden och sidfötter för en konsekvent layout.
+- `inc/header.php`, 
+- `inc/footer.php`: Återanvändbara sidhuvuden och sidfötter för en konsekvent layout.
 - `inc/meny.php`: Navigeringsmeny som länkar till webbplatsens olika sidor.
+- `inc/login.php`: Login komponent, återanvändbar. Innehåller även logout knappen.
+- `inc/logout.php`: Innehåller bara logiken bakom utloggningen
