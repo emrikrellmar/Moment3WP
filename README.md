@@ -1,43 +1,59 @@
-# Webbserverprogrammering 1 - Inloggningssystem
+# Web Server Programming 1 - Login System
 
-Detta projekt är en del av kursen "Webbserverprogrammering 1" och består av en enkel webbplats med flersidiga vyer samt ett inloggningssystem. Huvudfokus är att skapa en webbplats där användaren kan logga in för att få tillgång till specifika sidor och funktioner. Projektet är byggt med PHP.
+This project is part of the **"Web Server Programming 1"** course and consists of a simple multi-page website with a login system.
+The main focus is to create a website where users can log in to access specific pages and features. The project is built with **PHP**.
 
-## Funktioner
+## Features
 
-- **Inloggningssystem**: Användaren kan logga in med ett korrekt användarnamn och lösenord (admin, 12345). Efter inloggning får användaren tillgång till särskilda sidor och innehåll som annars är dolda.
-- **Sessionhantering**: PHP:s `$_SESSION` används för att lagra användarens inloggningsstatus, vilket gör det möjligt att visa olika innehåll beroende på om användaren är inloggad eller ej.
+* **Login System**: Users can log in using a valid username and password (`admin`, `12345`). Once logged in, they gain access to special pages and content that are otherwise hidden.
+* **Session Management**: PHP's `$_SESSION` is used to store the user's login status, allowing the site to display different content depending on whether the user is logged in or not.
 
-## Inloggningsfunktion
+## Login Functionality
 
-Inloggningssystemet är huvuddelen av projektet och den består av:
+The login system is the core of the project and consists of the following components:
 
-1. **Inloggningsformulär**: 
-   - Användaren möts av ett enkelt formulär där de kan fylla i sitt användarnamn och lösenord.
+1. **Login Form**:
 
-   - Man kan därefter logga in med två olika användare
-  
-   emrik:
-   - **Användarnamn**: `emrik`
-   - **Lösenord**: `54321`
+   * The user is greeted with a simple form where they can enter their username and password.
+   * Two different user accounts can be used to log in:
 
-   Admin:
-   - **Användarnamn**: `admin`
-   - **Lösenord**: `12345`
+   **User: emrik**
 
-2. **Sessionsbaserad inloggning**:
-   - När användaren loggar in kontrolleras om deras uppgifter stämmer via en enkel PHP-omfattning.
-   - Vid korrekta inloggningsuppgifter sätts sessionen `$_SESSION['inLoggad'] = true`, vilket möjliggör tillgång till skyddat innehåll.
+   * **Username:** `emrik`
+   * **Password:** `54321`
 
-## Webbsidornas Struktur
+   **User: admin**
 
-- `index.php`: Huvudfilen för att inkludera olika sidor och hantera menyval.
-  
-- `pages/blogg.php`: Visar en bloggsektion där en inloggad användare kan läsa inlägg.
-- `pages/bilder.php`: Visar ett bildgalleri för inloggade användare.
-- `pages/kontakt.php`: Innehåller ett kontaktformulär för inloggade användare att skicka meddelanden.
-  
-- `inc/header.php`, 
-- `inc/footer.php`: Återanvändbara sidhuvuden och sidfötter för en konsekvent layout.
-- `inc/meny.php`: Navigeringsmeny som länkar till webbplatsens olika sidor.
-- `inc/login.php`: Login komponent, återanvändbar. Innehåller även logout knappen.
-- `inc/logout.php`: Innehåller bara logiken bakom utloggningen
+   * **Username:** `admin`
+   * **Password:** `12345`
+
+2. **Session-Based Authentication**:
+
+   * When a user attempts to log in, their credentials are validated using basic PHP logic.
+   * If the login details are correct, the session is set using:
+
+     ```php
+     $_SESSION['inLoggad'] = true;
+     ```
+
+     This grants access to protected content and pages.
+
+## Website Structure
+
+* `index.php`: The main file for including different pages and handling menu navigation.
+
+### **Pages (pages/)**:
+
+* `pages/blogg.php`: Displays a blog section where logged-in users can read posts.
+* `pages/bilder.php`: Shows an image gallery for logged-in users.
+* `pages/kontakt.php`: Contains a contact form where logged-in users can send messages.
+
+### **Includes (inc/)**:
+
+* `inc/header.php`: Reusable header for a consistent layout.
+* `inc/footer.php`: Reusable footer for a consistent layout.
+* `inc/meny.php`: Navigation menu linking to different parts of the website.
+* `inc/login.php`: Login component, reusable and includes the **logout button**.
+* `inc/logout.php`: Contains only the backend logic for logging out.
+
+---
